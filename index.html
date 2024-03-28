@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP32 WebSockets Data Plotter</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="./ESP32_Lissajous.css">
+</head>
+<body>
+  <div class="block_container"  style="background-color: #00b5e2; margin-left:10%; margin-right:10%;">    <p> </p>
+    <p> </p>
+    <br>
+
+
+
+    <div id="block_container" >
+    <p> </p>
+    <p> </p>
+
+        <h1>ESP32 WebSockets Data Plotter</h1>
+        <h2>CIIEC-BUAP</h2>
+   <p style="font-size: 30px; margin-left: 80%;">March, 28th, 2024 </p>
+        <p style="font-size: 20px; margin-left: 80%;"><a href="https://github.com/lvillasen/ESP32-WebSockets-Data-Plotter" >Source Code</a> </p>
+
+        <hr>
+            
+        <h2> Introduction</h2>
+
+<p style="color:black;font-size:30px;">
+This app plots and prints the data sent by an <a href="https://en.wikipedia.org/wiki/ESP32" >ESP32 microcontroller</a>, programmed with the <a href="https://www.javatpoint.com/arduino-ide" >Arduino IDE</a> open-source software, to act as a webserver using  <a href="https://en.wikipedia.org/wiki/WebSocket" >WebSockets</a> to communicate with client browsers in a bidirectional way.</p>
+
+<p style="color:black;font-size:30px;">In this application an ESP32, version Dev Kit V1 shown below, is programmed with the ESP32_Lissajous.ino code provided to send two sinusoidal signals, with programmable frequencies and phases, in columns separated by one space. In turn, the Web App provided plots these signals and their resulting <a href="https://en.wikipedia.org/wiki/Lissajous_curve" >Lissajous curve</a>. The client browser also controls various parameters that can be changed on the ESP32 webserver. </p>
+
+<p style="color:black;font-size:30px;">This Web App can be easily modified to serve as the basis of a data acquisition system in projects where an ESP32, or any other microcontroller, feeds data into a computer by using WebSockets. </p>
+
+     <center><img src="./ESP32.png" alt="Trulli" width="50%"></center>
+    <br><br>
+
+
+<hr>
+
+    </div>
+
+
+
+<div class="block_container" >
+    
+
+<labelstyle="font-size: 15pt;" >Frequency f1 in Hz:  </label>
+<input id="f1" style="width:5%;" value=".10" type="text" onchange="send_f1()">
+
+
+<label style="font-size: 15pt;">Frequency f2 in Hz:  </label>
+<input id="f2" style="width:5%;" value=".30" type="text" onchange="send_f2()">
+<labelstyle="font-size: 15pt;" >Phase 1 in Degrees:  </label>
+<input id="p1" style="width:5%;" value="0" type="text" onchange="send_p1()">
+<labelstyle="font-size: 15pt;" >Phase 2 in Degrees:  </label>
+<input id="p2" style="width:5%;" value="0" type="text" onchange="send_p2()">
+<br>
+<br>
+<label style="font-size: 15pt;">Sampling Rate in Hz:  </label>
+<input id="sampling_rate" style="width:5%;" value="4.0" type="text" onchange="send_sr()">
+<label style="font-size: 15pt;"> Number of Points in Plot:  </label>
+<input id="points_max" style="width:5%;" value="100" type="text" >
+       
+
+
+<label style="font-size: 15pt;"> Column X:  </label>
+<input id="ColumnX" style="width:5%;" value="1" type="text"  >
+<label style="font-size: 15pt;"> Column Y:  </label>
+<input id="ColumnY" style="width:5%;" value="2" type="text"  >
+<br>
+<br>
+<label style="font-size: 15pt;">IP of ESP32 Server</label>
+<input id="ip" style="width:10%;" value="192.168.1.238" type="text">
+<input class="favorite styled" type="button" id="bt_connect" onclick="connect_onclick()" value="Connect" ;>
+ <span class="label">WebSocket: <span id="ws_state"><span style="color:blue">CLOSED</span></span></span>
+  </div>
+         
+<br>
+
+   
+<div id="plot_dataX" style= " border:solid 5px #003b5c; width:100%;"></div>
+
+<hr>
+<div id="plot_dataY" style= " border:solid 5px #003b5c; width:100%;"></div>
+
+<hr>
+<div id="plot_dataXY" style= " border:solid 5px #003b5c; width:100%;"></div>
+
+<hr>
+
+
+
+<label style="font-size: 15pt;margin-left: 20px;">Data:  </label>
+
+
+<textarea id="display_data" style= "white-space: pre; border:solid 5px #003b5c;" rows="20" cols="120"></textarea>
+<hr>
+</div>
+   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</body>
+<script src="./ESP32_Lissajous.js"></script>
+</html>
+
