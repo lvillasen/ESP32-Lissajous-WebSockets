@@ -13,7 +13,7 @@ This Web App can be easily modified to serve as the basis of a data acquisition 
 - Open the file index.html with any web browser on the same local network and connect to the ip address of the ESP32 server provided on the serial monitor (9600 baud) of the Arduino IDE application.
 
 ## Wep page 
-- (It just displays the front-end of the web page, to make it work install the code provided on your local network and open the index.html file with any browser)
+- Note: It just displays the front-end of the web page, to make it work install the code provided on your local network and open the index.html file with any browser
 
 https://ciiec.buap.mx/ESP32-WebSockets-Data-Plotter/
 
