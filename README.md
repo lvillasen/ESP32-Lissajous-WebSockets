@@ -15,7 +15,7 @@ This Web App can be easily modified to serve as the basis of a data acquisition 
 ## Wep page 
 - Note: It just displays the front-end of the web page, to make it work install the code provided on your local network and open the index.html file with any browser
 
-https://ciiec.buap.mx/ESP32-WebSockets-Data-Plotter/
+https://ciiec.buap.mx/ESP32-Lissajous-WebSockets/
 
 
 ## License
