@@ -8,6 +8,7 @@ This Web App can be easily modified to serve as the basis of a data acquisition 
 
 ## Usage
 
+- This app requires the ESP32 microcontroller
 - Clone the repository
 - Program the ESP32 module with the ESP32_Lissajous.ino code provided using the Arduino IDE software.
 - Open the file index.html with any web browser on the same local network and connect to the ip address of the ESP32 server provided on the serial monitor (9600 baud) of the Arduino IDE application.
