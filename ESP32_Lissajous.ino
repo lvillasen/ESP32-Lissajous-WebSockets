@@ -3,8 +3,8 @@
 #include <WebSocketsServer.h>
 
 
-const char* ssid = "INFINITUM153F"; //SSID
-const char* password = "eHAbc7qDad"; //Password
+const char* ssid = "your ssid"; //SSID
+const char* password = "your passwd"; //Password
 
 AsyncWebServer server(80);
 WebSocketsServer webSocket = WebSocketsServer(81);  // WebSocket server on port 81
