@@ -1,4 +1,4 @@
-# ESP32 Lissajous WebSockets Data Plotter
+# ESP32 Lissajous WebSockets
 
 This Web App plots and prints the data sent by an ESP32 microcontroller, programmed with the Arduino IDE open-source software, to act as a webserver using WebSockets to communicate with client browsers in a bidirectional way.
 
