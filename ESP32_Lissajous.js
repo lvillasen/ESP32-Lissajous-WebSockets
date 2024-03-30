@@ -194,12 +194,12 @@ var layoutY = {
     var dataXY =[traceXY,traceXYLast]
     var layoutXY = {
               xaxis: {
-                  //   range: [0, N],
-                  title: "Column  " + String(columnX)
+                range: [-1.1, 1.1],
+                title: "Column  " + String(columnX)
               },
               yaxis: {
-                  //    range: [-1, 1],
-                  title: "Column " + String(columnY)
+                range: [-1.1, 1.1],
+                title: "Column " + String(columnY)
               },
               title: "Column " + String(columnY) +" vs Column " + String(columnX),font: {
     family: 'Arial, sans-serif;',
