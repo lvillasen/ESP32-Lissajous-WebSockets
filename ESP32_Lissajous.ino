@@ -13,11 +13,11 @@ const int ledPin = LED_BUILTIN;
 
 String result ;
 int ledState = HIGH; 
-float f1 = .1;
-float f2 = .3;
-float p1 = 0;
-float p2 = 0;
-float sr = 4;
+float f1 = 0.1;
+float f2 = 0.4;
+float p1 = 30.0;
+float p2 = 0.0;
+float sr = 10.0;
 float ph1;
 float ph2;
 unsigned long previousMillis = 0;  // will store last time LED was updated
