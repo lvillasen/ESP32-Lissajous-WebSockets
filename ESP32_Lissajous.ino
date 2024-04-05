@@ -9,7 +9,7 @@ const char* password = "your passwd"; //Password
 AsyncWebServer server(80);
 WebSocketsServer webSocket = WebSocketsServer(81);  // WebSocket server on port 81
 int connect = 0;
-const int ledPin = LED_BUILTIN;  
+const int ledPin = LED_BUILTIN;  // Change to 33 for ESP32-CAM AI-Thinker
 
 String result ;
 int ledState = HIGH; 
